@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&display=swap');
+
+/* Base styling */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    font-weight: 400;
+    /* 1.6*10 = 16px */
+    font-size: 1.6rem;
+}
+
+h1{
+    font-weight: 800;
+    font-size: 36px;
+    margin: 1.6rem 0;
+}
+
+h2{
+    font-weight: 800;
+    font-size: 2.4rem;
+    margin: 1.6rem 0;
+}
+
+h3{
+    font-weight: 800;
+    font-size: 1.2rem;
+    margin: 1.6rem 0;
+}
+
+p {
+    font-weight: 400;
+    font-size: 18px;
+    margin: 1.6rem 0;
+}
+
+img {
+    width: 80%;
+    height: auto;
+}
+
+li {
+    list-style: none;
+}
+
+button {
+    font-size: 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    transition: 0.4s;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    align-items: center;
+    margin: auto;
+}
+
+.section {
+    padding: 100px 0;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    text-align: center;
+}
+
+.logo img {
+    display: block;
+    margin: 18px auto;
+    max-width: 100%;
+    height: auto;
+}
+
+nav {
+    background-color: rgb(0, 0, 10);
+    text-align: center;
+    padding: 10px;
+}
+
+nav .nav a{
+    color: white;
+    font-size: small;
+    font-weight: 400;
+}
+
+.hero {
+    background-color: #FF0000;
+    color: #FFf;
+    padding: 2rem;
+    text-align: center;
+}
+
+.hero button {
+    background-color: red;
+}
+
+.hero button a {
+    color: black;
+    border: 1px solid whitesmoke;
+    padding: 10px;
+}
+
+.product-card button {
+    background-color: whitesmoke;
+}
+
+.action button a {
+    color: black;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.action button {
+    background-color: red;
+}
+
+.product-card button a {
+    color: black;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+button:hover a {
+    background-color: black;
+    color: white;
+}
+
+.featured-products {
+    padding: 2em;
+    text-align: center;
+}
+
+.featured-products h2 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.product-card {
+    display: inline-block;
+    background-color: #f0f0f0;
+    padding: 1.5rem;
+    margin: 2rem;
+    margin-right: 200px;
+    width: 200px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.2s ease;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.product-card h3 {
+    font-size: 18px;
+    margin-bottom: 0.5em;
+    color: #337ab7;
+}
+
+.product-card p {
+    font-size: 14px;
+    margin-bottom: 1rem;
+    color: #666;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    background-color: #f0f0f0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 1s ease;
+    opacity: 0;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.slider-nav {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+}
+
+.slider-nav button {
+    background-color: #337ab7;
+    color: #FFF;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.slider-nav button:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.slider-nav button:focus {
+    outline: none;
+}
+
+.slider-dots {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+}
+
+.slider-dots button {
+    background-color: #337ab7;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+.slider-dots button:active {
+    background-color: #23527c;
+}
+
+.slider-dots button:hover {
+    background-color: #23527c;
+}
+
+.slider-dots button:focus {
+    outline: none;
+}
+
+.action {
+    padding: 2rem;
+    background-color: red;
+    color: #FFf;
+    text-align: center;
+}
+
+/* About Section */
+.our-story {
+    padding: 2em;
+    background-color: red;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.our-story h1 {
+    text-align: center;
+    font-size: 70px;
+    font-family: 'Agdasima', sans-serif;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.our-story p {
+    text-indent: 50px;
+}
+
+.mission-values {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Agdasima', sans-serif;
+  }
+
+  .mission-values h1 {
+    font-size: 15em;
+    color: #1a1a1a;
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .mission-values h2 {
+    font-size: 10em;
+    color: #2c3e50;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 5px;
+  }
+
+  .mission-values p {
+    font-size: 5rem;
+    color: #444;
+  }
+
+  .mission-values ul {
+    list-style-type: square;
+    padding-left: 20px;
+  }
+
+  .mission-values li {
+    background-color: #f1f1f1;
+    margin: 8px 0;
+    padding: 12px;
+    border-left: 5px solid #3498db;
+    font-size: 10em;
+    color: #333;
+    transition: background-color 0.3s;
+  }
+
+  .mission-values li:hover {
+    background-color: #e0f7fa;
+  }
+
+/* About Section */
+footer {
+    background-color: #000;
+    color: #FFf;
+    padding: 1rem;
+    text-align: center;
+    clear: both;
+}
